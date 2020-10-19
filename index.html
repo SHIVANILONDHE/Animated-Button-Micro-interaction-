@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Animation</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript">
+		function animation() {      
+		document.getElementById("stroke1").classList.toggle("rotate1");
+        document.getElementById("stroke2").classList.toggle("opacity");
+        document.getElementById("stroke3").classList.toggle("rotate2");
+
+         var element = document.getElementById("burger");
+         element.addEventListener("click", function(event) {
+         event.preventDefault();
+         document.getElementById("tap-circle").classList.remove("click-animation");
+         void element.offsetWidth;
+        document.getElementById("tap-circle").classList.add("click-animation");
+    }, false);
+    }
+
+	</script>
+</head>
+<body>
+<div id="burger" onclick="animation()">
+    <div id="stroke1"></div>
+    <div id="stroke2"></div>
+    <div id="stroke3"></div>
+    <div id="tap-circle"></div>
+</div>   
+
+</body>
+</html>
